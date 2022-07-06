@@ -22,7 +22,7 @@ checkprefix(){
 
 removetags() {
     echo removing $REGISTRY/$REGISTRY_REPO:$line
-    regctl tag delete $REGISTRY/$REGISTRY_REPO:$line
+    #regctl tag delete $REGISTRY/$REGISTRY_REPO:$line
 }
 
 regctl tag ls $REGISTRY/$REGISTRY_REPO | while read line ; do checkprefix; done
