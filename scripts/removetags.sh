@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cat << EOF > ~/.regctl/config.json
-{"hosts":{"$REGISTRY":{"user":"$REGISTRY_USER","pass":"$REGISTRY_PASSWORD"}}}
+{"hosts":{"$REGISTRY":{"user":"$REGISTRY_USERNAME","pass":"$REGISTRY_PASSWORD"}}}
 EOF
 
 set -eu
@@ -22,7 +22,7 @@ checkprefix(){
 
 removetags() {
     echo removing $REGISTRY/$REGISTRY_REPO:$line
-    #regctl tag delete $REGISTRY/$REGISTRY_REPO:$line
+    regctl tag delete $REGISTRY/$REGISTRY_REPO:$line
 }
 
 regctl tag ls $REGISTRY/$REGISTRY_REPO | while read line ; do checkprefix; done

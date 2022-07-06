@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cat << EOF > ~/.regctl/config.json
-{"hosts":{"$REGISTRY":{"user":"$REGISTRY_USER","pass":"$REGISTRY_PASSWORD"}}}
+{"hosts":{"$REGISTRY":{"user":"$REGISTRY_USERNAME","pass":"$REGISTRY_PASSWORD"}}}
 EOF
 
 set -eu
